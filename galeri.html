@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeri - Fano</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    header {
+      background-color: #191838;
+      padding: 12px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    header h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #fff;
+      margin: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #0dcaf0;
+      transform: translateY(-2px);
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      left: 0;
+      bottom: -4px;
+    }
+
+    .container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      text-align: center;
+      margin: 5px 0 20px;
+      animation: slideUp 0.8s ease-in-out;
+    }
+
+    .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 40px 0 15px;
+      color: #ccc;
+    }
+
+    .gallery-img-portrait {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+    }
+
+    .gallery-img-portrait:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #999;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin-left: 12px;
+        font-size: 13px;
+      }
+
+      .gallery-img-portrait {
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>ioo.</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="galeri.html" class="active">Galeri</a>
+      <a href="portofolio.html">Portofolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimoni.html">Testimoni</a>
+    </nav>
+  </header>
+
+  <!-- Galeri -->
+  <div class="container py-4">
+    <h2>Galeri Foto</h2>
+
+    <div class="section-title text-center">hari ini</div>
+    <div class="row g-2 justify-content-center">
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto0.png" class="gallery-img-portrait" alt="Foto 0"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto1.png.jpg" class="gallery-img-portrait" alt="Foto 1"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="lung1.png.jpg" class="gallery-img-portrait" alt="Foto 0"></div>
+     <div class="col-4 col-sm-3 col-md-2"><img src="lung2.png.jpg" class="gallery-img-portrait" alt="Foto 0"></div>
+    </div>
+
+    <div class="section-title text-center">Kemarin</div>
+    <div class="row g-2 justify-content-center">
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto8.png.jpg" class="gallery-img-portrait" alt="Foto 8"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto9.png.jpg" class="gallery-img-portrait" alt="Foto 9"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto10.png.jpg" class="gallery-img-portrait" alt="Foto 10"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto11.png.jpg" class="gallery-img-portrait" alt="Foto 11"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto12.png.jpg" class="gallery-img-portrait" alt="Foto 12"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto13.png.jpg" class="gallery-img-portrait" alt="Foto 13"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto14.png.jpg" class="gallery-img-portrait" alt="Foto 14"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto15.png.jpg" class="gallery-img-portrait" alt="Foto 15"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto16.png.jpg" class="gallery-img-portrait" alt="Foto 16"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto17.png.jpg" class="gallery-img-portrait" alt="Foto 17"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto18.png.jpg" class="gallery-img-portrait" alt="Foto 17"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto19.png.jpg" class="gallery-img-portrait" alt="Foto 17"></div>
+    </div>
+
+    <div class="section-title text-center">Sab, 14 Jun</div>
+    <div class="row g-2 justify-content-center">
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto7.png" class="gallery-img-portrait" alt="Foto 7"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="estetik1.png" class="gallery-img-portrait" alt="Foto 7"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="estetik2.png" class="gallery-img-portrait" alt="Foto 7"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="estetik3.png" class="gallery-img-portrait" alt="Foto 7"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="estetik4.png" class="gallery-img-portrait" alt="Foto 7"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="estetik5.png" class="gallery-img-portrait" alt="Foto 7"></div>
+    
+    </div>
+
+    <div class="section-title text-center">Kam, 12 Jun</div>
+    <div class="row g-2 justify-content-center">
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto2.png" class="gallery-img-portrait" alt="Foto 2"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto3.png" class="gallery-img-portrait" alt="Foto 3"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto4.png" class="gallery-img-portrait" alt="Foto 4"></div>
+      <div class="col-4 col-sm-3 col-md-2"><img src="foto5.png" class="gallery-img-portrait" alt="Foto 5"></div>
+    
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-0">&copy; 2025 fanoguddris. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

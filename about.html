@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 1s ease-in-out;
+      font-size: 0.85rem;
+    }
+
+    header {
+      background: #191838;
+      padding: 10px 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h2 {
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      position: relative;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #aaa;
+      transform: translateY(-2px);
+    }
+
+     nav a.active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      left: 0;
+      bottom: -4px;
+    }
+
+
+    nav a:hover {
+      color: #0dcaf0;
+    }
+
+
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px 4%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      animation: slideUp 1s ease-in-out;
+    }
+
+    .profile-container {
+      animation: popIn 1s ease forwards;
+      margin-bottom: 5px;
+    }
+
+    .profile-img {
+      width: 95px;
+      height: 95px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      transition: transform 0.3s ease;
+      margin-top: -10px;
+      margin-left: 10px;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05) rotate(2deg);
+    }
+
+    .section {
+      margin-bottom: 20px;
+      animation: slideUp 1s ease-in-out;
+    }
+
+    .section h4 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+    }
+
+    .progress {
+      background: #333;
+      height: 14px;
+    }
+
+    .progress-bar {
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.75rem;
+      line-height: 14px;
+      transition: width 1s ease-in-out;
+    }
+
+    footer {
+      background-color: #111;
+      text-align: center;
+      color: white;
+      font-size: 0.75rem;
+      padding: 10px 0;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h2>ioo.</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="portofolio.html">Portofolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimoni.html">Testimoni</a>
+    </nav>
+  </header>
+
+  <!-- Judul Halaman -->
+  <div class="section-title">Tentang Saya</div>
+
+  <!-- Konten -->
+  <div class="main-content">
+    <div class="row">
+      <!-- Kolom Kiri -->
+      <div class="col-md-6 text-start">
+
+        <!-- Foto di atas Biodata -->
+        <div class="profile-container text-start">
+          <img src="pppp.png" alt="Foto Profil" class="profile-img" />
+        </div>
+
+        <div class="section">
+          <h4>Biodata Singkat</h4>
+          <ul>
+            <li><strong>Nama:</strong> Oktafano Guddris Lodowik</li>
+            <li><strong>TTL:</strong> Waingapu, 21 Oktober 2003</li>
+            <li><strong>Alamat:</strong> Jln. Tritura Manubara RT10/RW05</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h4>Pendidikan</h4>
+          <ul>
+            <li>2023 - Sekarang: Universitas Kristen Wira Wacana Sumba</li>
+            <li>2019 - 2022: SMA Negeri 1 Waingapu</li>
+            <li>2014 - 2019: SMP Negeri 2 Waingapu</li>
+            <li>2009 - 2014: SD Yapmas</li>
+            <li>2007 - 2009: TK Pembina</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan -->
+      <div class="col-md-6 text-start">
+        <div class="section">
+          <h4>Pengalaman</h4>
+          <ul>
+            <li>Pengurus WVI (Wahana Visi Indonesia), Forum Anak Sumba Timur</li>
+            <li>Pelatihan Memasak atau Chef</li>
+            <li>Guru Sekolah Minggu</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h4>Keterampilan</h4>
+          <p>HTML</p>
+          <div class="progress mb-2">
+            <div class="progress-bar" style="width: 75%;">75%</div>
+          </div>
+
+          <p>CSS</p>
+          <div class="progress mb-2">
+            <div class="progress-bar" style="width: 70%;">70%</div>
+          </div>
+
+          <p>Bootstrap</p>
+          <div class="progress mb-2">
+            <div class="progress-bar" style="width: 60%;">60%</div>
+          </div>
+
+          <p>JavaScript</p>
+          <div class="progress mb-2">
+            <div class="progress-bar" style="width: 55%;">55%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-0">&copy; 2025 fanoguddris. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
